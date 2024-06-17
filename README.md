@@ -6,6 +6,21 @@ This repository contains pre-patched opentype versions of macOS's SFMono fonts w
 <img width="1514" alt="image" src="https://user-images.githubusercontent.com/71196912/205555115-7079b836-2c7e-43d7-b81b-256cc8d12807.png">
 
 ## Installation
+### Universal
+```bash
+#!/bin/bash
+
+if [ "$(uname)" == "Darwin" ]; then
+	FONTS=$HOME/Library/Fonts
+else
+	FONTS=$HOME/.fonts
+fi
+
+wget https://github.com/xelorr/SFMono-Nerd-Font-Ligaturized/releases/latest/download/sf.tar.xz
+mkdir -p $FONTS
+tar xvf sf.tar.xz -C $FONTS/
+rm sf.tar.xz
+```
 ### Manual
 #### Linux
 Copy all of the font files to `~/.local/share/fonts` or `~/.fonts/`
