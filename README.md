@@ -8,15 +8,22 @@ This repository contains pre-patched opentype versions of macOS's SFMono fonts w
 ## Installation
 ### Manual
 #### Linux
-Copy all of the font files to `~/.local/share/fonts`
+Copy all of the font files to `~/.local/share/fonts` or `~/.fonts/`
 ```sh
-git clone https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized.git && cd SFMono-Nerd-Font-Ligaturized
-cp *.otf ~/.local/share/fonts
+wget https://github.com/xelorr/SFMono-Nerd-Font-Ligaturized/releases/latest/download/sf.tar.xz
+mkdir -p $HOME/.fonts
+tar xvf sf.tar.xz -C $HOME/.fonts/
+rm sf.tar.xz
 ```
 
 #### MacOS
-1. Either clone or download and unzip this repository
-2. Highlight and double-click to install all `.otf` files with Font Book
+Copy all of the font files to `~/Library/Fonts/`
+```sh
+wget https://github.com/xelorr/SFMono-Nerd-Font-Ligaturized/releases/latest/download/sf.tar.xz
+mkdir -p $HOME/Library/Fonts
+tar xvf sf.tar.xz -C $HOME/Library/Fonts/
+rm sf.tar.xz
+```
 
 ### Homebrew
 Needs a working installation of `brew`
