@@ -10,7 +10,7 @@ This repository contains pre-patched opentype versions of macOS's SFMono fonts w
 ```bash
 #!/bin/bash
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
 	FONTS=$HOME/Library/Fonts
 else
 	FONTS=$HOME/.fonts
